@@ -1,0 +1,177 @@
+body{
+    text-align: center;
+    background: url(glaxy.gif) repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+a:hover{
+  background-color:rgba(0, 0, 139, 0.507);
+  transition-delay: 0.5s;
+  }
+a{
+  transform: translate(-50%,-50%);
+  display: flex;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color:white;
+  text-transform:uppercase ;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 30px;
+  overflow: hidden;
+  transform: 0.2s;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 3%;
+
+}
+
+a span:nth-child(1)
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #51ff00 ,rgba(255, 255, 255, 0.699));
+  animation: animate-top 1s linear infinite;
+}
+a span:nth-child(2)
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to right, #fff900 ,rgba(255, 255, 255, 0.699));
+  animation: animate-right 1s linear infinite;
+  animation-delay: 1s;
+}
+a span:nth-child(3)
+{
+  position: absolute;
+  bottom: 0;
+  right:0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #51ff00 ,rgba(255, 255, 255, 0.699));
+  animation: animate-bottom 1s linear infinite;
+}
+a span:nth-child(4)
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to right, #fff900 ,rgba(255, 255, 255, 0.699));
+  animation: animate-left 1s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate-top{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+@keyframes animate-right{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
+@keyframes animate-bottom{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate-left{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+.earth
+{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 5% 0 10% 43%;
+    animation: earthspin 10s linear alternate-reverse infinite;
+    overflow: hidden;
+  border-radius: 50%;
+}
+.earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+  }
+.earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    overflow: hidden;
+    background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+    background-size: cover;
+  }
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+.plane
+{
+    width:10px;
+    height: 10px;
+    position: absolute;
+    margin: -368px 0 0 519px;
+    animation: plane 6s linear infinite;
+    transform-origin: 140px 140px;
+}
+.plane h1
+{  
+    color: #428bca;
+    font-size: 2.5em;
+    transform: rotate(-55deg);
+}
+@keyframes plane
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+/* footer*/
+footer{
+  background-color: black;
+}
+footer p{
+  text-align: center;
+  font-size: small;
+  color:white;
+}
